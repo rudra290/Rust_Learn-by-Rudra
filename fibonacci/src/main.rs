@@ -16,18 +16,14 @@ fn main() {
         };
         break n = _n;
     }
+    let mut a: usize = 0;
+    let mut b: usize = 1;
     println!("Your Index is {}", n);
     print!("Your Series is: ");
-    for i in 1..n {
-        print!("{}, ", fib(i));
-    }
-    print!("{};", fib(n));
-}
-
-fn fib(ix: u32) -> u32 {
-    if ix == 0 || ix == 1 {
-        return ix;
-    } else {
-        return fib(ix - 1) + fib(ix - 2);
+    for _ in 1..n {
+        let temp = a;
+        a = b;
+        b = temp + b;
+        print!("{} ", b);
     }
 }
