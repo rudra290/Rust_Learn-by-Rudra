@@ -1,5 +1,5 @@
+use colored::*;
 use std::io::{self, Write};
-
 fn main() {
     println!("Fibonacci Series");
     let n: u32;
@@ -11,8 +11,11 @@ fn main() {
         io::stdin().read_line(&mut _n).expect("Failed to read line");
 
         let _n: u32 = match _n.trim().parse() {
-            Ok(_n) => _n,
-            Err(_) => continue,
+            Ok(num) => num,
+            Err(_) => {
+                eprintln!("{}", "Invalid input! Please enter a +ve number only.".red());
+                continue;
+            }
         };
         break n = _n;
     }
@@ -20,7 +23,7 @@ fn main() {
     let mut b: usize = 1;
     println!("Your Index is {}", n);
     print!("Your Series is: ");
-    for _ in 1..n {
+    for _ in 0..n {
         let temp = a;
         a = b;
         b = temp + b;
