@@ -1,9 +1,8 @@
 fn main() {
-    let height = 12;
-    let width = 14;
-    println!("Area is {}", area(height, width));
+    let dimention = (12, 14);
+    println!("Area is {}", area(dimention));
 }
 
-fn area(width: u32, height: u32) -> u32 {
-    return height * width;
+fn area(dimention: (u32, u32)) -> u32 {
+    return dimention.0 * dimention.1;
 }
