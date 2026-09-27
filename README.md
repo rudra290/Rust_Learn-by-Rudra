@@ -23,3 +23,5 @@ let b = a;
 println!("{a}"); // a is not valid here
 ```
 In normal languages, a and b is pointing same data. In language of rust. Both are owner of that data. Which rust is priventing by it's compiler. That's why at last you can see a is not valid at printing.
+
+![Information about Operators in Rust](./operators.png)
