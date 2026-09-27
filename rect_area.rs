@@ -8,9 +8,11 @@ fn main() {
         width: 12,
         height: 14,
     };
-    println!("Area is {}", area(rect1));
+    println!("Area is {}", rect1.area());
 }
 
-fn area(rect: Rectangle) -> u32 {
-    return rect.width * rect.height;
+impl Rectangle {
+    fn area(&self) -> u32 {
+        return self.width * self.height;
+    }
 }
